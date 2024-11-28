@@ -32,7 +32,7 @@ ARRIVAL_RATES = {
 }
 
 # 1. Load and model input data
-data = pd.read_csv('Data set for Lab and recovery durations.csv')
+data = pd.read_csv('hospital-lab-scheduling-and-resource-allocation\Data set for Lab and recovery durations.csv')
 
 # Fit distributions to CATH Lab time
 cath_lab_times = data['CATH Lab time (in minutes)'].dropna()
