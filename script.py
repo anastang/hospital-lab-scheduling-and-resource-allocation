@@ -89,8 +89,9 @@ def calculate_costs_and_profit(stats, num_holding_bays, closing_time):
 
 # Visualization
 def plot_results(results_df):
-    # Ensure the directory is the script's location
-    output_directory = os.getcwd()
+    # Directory where plots will be saved
+    output_directory = os.path.join(os.getcwd(), 'hospital-lab-scheduling-and-resource-allocation')
+    os.makedirs(output_directory, exist_ok=True)  # Create the directory if it doesn't exist
 
     # Plot 1: Profit vs Holding Bays and Closing Time
     plt.figure(figsize=(10, 6))
